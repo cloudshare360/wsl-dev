@@ -6,7 +6,7 @@ theme: minima
 
 # Site settings
 title: "WSL Development Environment"
-description: "Complete documentation for Windows Subsystem for Linux setup, configuration, and GUI desktop access via RDP"
+description: "Enterprise-grade WSL development environment with code-server, service management, Infrastructure as Code, and comprehensive automation tools"
 baseurl: "/wsl-dev"
 url: "https://cloudshare360.github.io"
 
@@ -34,11 +34,14 @@ include:
   - _pages
   - wsl-commands
   - wsl-with-rdp
+  - wsl-install-code-server
   - scripts
+  - PROJECT-COMPLETION.md
   
 exclude:
   - .git
   - .gitignore
+  - .agent-metadata
   - Gemfile
   - Gemfile.lock
   - node_modules

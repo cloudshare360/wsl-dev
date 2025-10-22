@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSL Development Environment Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .badges {
+            margin: 20px 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            margin: 5px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .badge:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .quick-start {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .stats {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-item {
+            padding: 10px;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .toc h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .toc ul {
+            list-style: none;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        .toc a {
+            color: #333;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .toc a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .quick-start {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐧 WSL Development Environment</h1>
+            <p>Complete documentation for Windows Subsystem for Linux setup, configuration, and GUI desktop access</p>
+            
+            <div class="badges">
+                <a href="https://github.com/cloudshare360/wsl-dev" class="badge">📂 GitHub Repository</a>
+                <a href="https://github.com/cloudshare360/wsl-dev/blob/main/README.md" class="badge">📖 README</a>
+                <a href="./wsl-commands/README.md" class="badge">📚 WSL Commands</a>
+                <a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md" class="badge">🖥️ RDP Setup</a>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px; color: white;">
+                <p style="margin: 0; font-size: 0.9em;">
+                    🌐 <strong>You're viewing the GitHub Pages site</strong> | 
+                    <a href="https://github.com/cloudshare360/wsl-dev" style="color: #FFD700; text-decoration: underline;">View Source Repository</a> | 
+                    <a href="https://github.com/cloudshare360/wsl-dev/blob/main/README.md" style="color: #FFD700; text-decoration: underline;">View Raw README</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h2>🚀 Quick Start Paths</h2>
+            <p>Choose your path based on your goals and experience level:</p>
+            
+            <div class="quick-start">
+                <div class="card">
+                    <h3>🚀 Fast Track Setup</h3>
+                    <p>Get WSL with GUI desktop running quickly using automated scripts.</p>
+                    <p><strong>Time:</strong> 15-30 minutes</p>
+                    <a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md#-quick-setup-script" class="btn">Start Fast Setup</a>
+                </div>
+                
+                <div class="card">
+                    <h3>📚 Learn Step-by-Step</h3>
+                    <p>Understand each component with detailed explanations and examples.</p>
+                    <p><strong>Time:</strong> 45-60 minutes</p>
+                    <a href="./wsl-commands/README.md" class="btn">Browse Documentation</a>
+                </div>
+                
+                <div class="card">
+                    <h3>🆘 Fix Issues</h3>
+                    <p>Troubleshoot existing WSL setup or RDP connection problems.</p>
+                    <p><strong>Time:</strong> Variable</p>
+                    <a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md#-troubleshooting-common-issues" class="btn">Get Help</a>
+                </div>
+                
+                <div class="card">
+                    <h3>🖥️ Full RDP Desktop</h3>
+                    <p>Complete Ubuntu desktop environment accessible via Remote Desktop.</p>
+                    <p><strong>Time:</strong> 30-60 minutes</p>
+                    <a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md" class="btn">Setup GUI Desktop</a>
+                </div>
+                
+                <div class="card">
+                    <h3>🎓 Advanced Config</h3>
+                    <p>Performance tuning, multiple users, custom configurations.</p>
+                    <p><strong>Time:</strong> 60+ minutes</p>
+                    <a href="./wsl-commands/advanced.md" class="btn">Advanced Setup</a>
+                </div>
+                
+                <div class="card">
+                    <h3>🔧 Manage Distributions</h3>
+                    <p>Install, backup, and manage multiple WSL distributions.</p>
+                    <p><strong>Time:</strong> 10-20 minutes</p>
+                    <a href="./wsl-commands/distributions.md" class="btn">Manage Distros</a>
+                </div>
+            </div>
+            
+            <div class="toc">
+                <h3>📖 Documentation Index</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div>
+                        <h4>WSL Commands Reference</h4>
+                        <ul>
+                            <li><a href="./wsl-commands/installation.md">📦 Installation & Setup</a></li>
+                            <li><a href="./wsl-commands/distributions.md">🐧 Distribution Management</a></li>
+                            <li><a href="./wsl-commands/usage.md">🚀 Usage & Operations</a></li>
+                            <li><a href="./wsl-commands/advanced.md">🔧 Advanced Commands</a></li>
+                            <li><a href="./wsl-commands/troubleshooting.md">🩺 Troubleshooting</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>RDP Desktop Setup</h4>
+                        <ul>
+                            <li><a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md#-installation-process">🛠️ Installation Process</a></li>
+                            <li><a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md#-troubleshooting-common-issues">🩺 Troubleshooting</a></li>
+                            <li><a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md#-user-management">👥 User Management</a></li>
+                            <li><a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md#-debugging-and-diagnostics">🐛 Debugging & Diagnostics</a></li>
+                            <li><a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md#-quick-setup-script">🚀 Automated Scripts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>🌟 Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">✅</div>
+                    <h3>Battle-Tested</h3>
+                    <p>Solutions proven through extensive real-world testing and troubleshooting</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Automated Setup</h3>
+                    <p>One-command installation scripts with error handling and verification</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Critical Fixes</h3>
+                    <p>Includes the essential startwm.sh configuration that resolves most RDP issues</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📚</div>
+                    <h3>Comprehensive</h3>
+                    <p>Complete coverage from basic installation to advanced troubleshooting</p>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <h3>📊 Repository Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">22+</div>
+                        <div>Documentation Files</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3,600+</div>
+                        <div>Lines of Content</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">9+</div>
+                        <div>Troubleshooting Scenarios</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div>Open Source</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>🛠️ Local Documentation Server</h2>
+            <p>For the best browsing experience, run a local server:</p>
+            
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h4>Option 1: Live Server (Recommended)</h4>
+                <pre style="background: #333; color: #fff; padding: 15px; border-radius: 5px; overflow-x: auto;"><code># Install and start live server
+npm install -g live-server
+live-server --port=8080 --open=/index.html</code></pre>
+                
+                <h4>Option 2: Python HTTP Server</h4>
+                <pre style="background: #333; color: #fff; padding: 15px; border-radius: 5px; overflow-x: auto;"><code># Python 3
+python -m http.server 8080
+
+# Then open: http://localhost:8080</code></pre>
+            </div>
+            
+            <div style="text-align: center; margin: 40px 0;">
+                <h3>🚀 Ready to Get Started?</h3>
+                <p>Choose your preferred method and begin your WSL journey!</p>
+                <a href="./wsl-with-rdp/WSL-RDP-Master-Guide.md" class="btn" style="margin: 10px;">🖥️ Setup GUI Desktop</a>
+                <a href="./wsl-commands/README.md" class="btn" style="margin: 10px;">📚 Browse Commands</a>
+                <a href="https://github.com/cloudshare360/wsl-dev" class="btn" style="margin: 10px;">⭐ Star on GitHub</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>📖 <strong>WSL Development Environment Guide</strong></p>
+            <p>Created with ❤️ for the WSL community</p>
+            <div style="margin: 15px 0;">
+                <strong>🔗 Navigation:</strong><br>
+                <a href="https://github.com/cloudshare360/wsl-dev" style="color: #FFD700; margin: 0 10px;">📂 GitHub Repository</a> | 
+                <a href="https://github.com/cloudshare360/wsl-dev/blob/main/README.md" style="color: #FFD700; margin: 0 10px;">📖 Repository README</a> | 
+                <a href="./wsl-commands/README.md" style="color: white; margin: 0 10px;">📚 Documentation Hub</a> | 
+                <a href="https://github.com/cloudshare360/wsl-dev/issues" style="color: white; margin: 0 10px;">🐛 Report Issues</a> | 
+                <a href="https://github.com/cloudshare360/wsl-dev/discussions" style="color: white; margin: 0 10px;">💬 Discussions</a>
+            </div>
+            <p style="font-size: 0.9em; opacity: 0.8;">
+                🌐 GitHub Pages: <code>https://cloudshare360.github.io/wsl-dev/</code><br>
+                📂 Repository: <code>https://github.com/cloudshare360/wsl-dev</code>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
