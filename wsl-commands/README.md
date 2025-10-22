@@ -11,6 +11,9 @@ Welcome to the comprehensive WSL (Windows Subsystem for Linux) commands referenc
 - **🔧 Advanced Commands](advanced.md)** - Advanced WSL configurations and power-user commands
 - **🩺 Troubleshooting](troubleshooting.md)** - Common issues, solutions, and diagnostic commands
 
+### Specialized Guides
+- **[🖥️ WSL with RDP](../wsl-with-rdp/WSL-RDP-Master-Guide.md)** - Complete guide for GUI desktop via RDP
+
 ## 🔄 Quick Command Reference
 
 | Action | Command | Category |
