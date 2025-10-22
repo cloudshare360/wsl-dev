@@ -4,6 +4,7 @@
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/cloudshare360/wsl-dev)
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-blue)](./wsl-commands/README.md)
 [![RDP Guide](https://img.shields.io/badge/RDP%20Setup-Master%20Guide-orange)](./wsl-with-rdp/WSL-RDP-Master-Guide.md)
+[![Pages Status](https://github.com/cloudshare360/wsl-dev/actions/workflows/pages.yml/badge.svg)](https://github.com/cloudshare360/wsl-dev/actions/workflows/pages.yml)
 
 A comprehensive documentation repository for Windows Subsystem for Linux (WSL) setup, configuration, and troubleshooting - with a focus on creating stable development environments and GUI desktop access via RDP.
 
