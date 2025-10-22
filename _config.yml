@@ -1,0 +1,65 @@
+# GitHub Pages Configuration
+# This file configures GitHub Pages for the WSL Development Environment repository
+
+# Theme
+theme: minima
+
+# Site settings
+title: "WSL Development Environment"
+description: "Complete documentation for Windows Subsystem for Linux setup, configuration, and GUI desktop access via RDP"
+baseurl: "/wsl-dev"
+url: "https://cloudshare360.github.io"
+
+# Author information
+author:
+  name: "cloudshare360"
+  email: "79122392+cloudshare360@users.noreply.github.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+  hard_wrap: false
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Include/Exclude files
+include:
+  - _pages
+  - wsl-commands
+  - wsl-with-rdp
+  - scripts
+  
+exclude:
+  - .git
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Custom navigation
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "WSL Commands"
+    url: "/wsl-commands/"
+  - title: "RDP Setup"
+    url: "/wsl-with-rdp/WSL-RDP-Master-Guide"
+  - title: "GitHub"
+    url: "https://github.com/cloudshare360/wsl-dev"
+
+# Footer links
+footer_links:
+  - title: "GitHub Repository"
+    url: "https://github.com/cloudshare360/wsl-dev"
+  - title: "Issues"
+    url: "https://github.com/cloudshare360/wsl-dev/issues"
+  - title: "Discussions"
+    url: "https://github.com/cloudshare360/wsl-dev/discussions"
