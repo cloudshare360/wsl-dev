@@ -68,9 +68,9 @@ tail -n 20 ~/.xsession-errors
 - **WSL_RDP_Troubleshooting.md** - Problem solving and debugging
 - **WSL_RDP_Management_Guide.md** - Advanced management and configuration
 
-### Previous Structure (archived)
-- **original-files/** - Contains 19 original conversation exports
-- **01-06 numbered files** - Previous intermediate organization (to be removed)
+### Previous Structure (archived and removed)
+- **original-files/** - Previously contained 26 original conversation exports (now removed)
+- **01-06 numbered files** - Previous intermediate organization (consolidated into new structure)
 
 ### Content Coverage
 ✅ **Prerequisites and installation procedures**  
