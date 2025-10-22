@@ -1,10 +1,14 @@
 # 🐧 WSL Development Environment
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://cloudshare360.github.io/wsl-dev/)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/cloudshare360/wsl-dev)
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-blue)](./wsl-commands/README.md)
 [![RDP Guide](https://img.shields.io/badge/RDP%20Setup-Master%20Guide-orange)](./wsl-with-rdp/WSL-RDP-Master-Guide.md)
 
 A comprehensive documentation repository for Windows Subsystem for Linux (WSL) setup, configuration, and troubleshooting - with a focus on creating stable development environments and GUI desktop access via RDP.
+
+> 🌐 **Browse Online:** [https://cloudshare360.github.io/wsl-dev/](https://cloudshare360.github.io/wsl-dev/)  
+> 📂 **GitHub Repository:** [https://github.com/cloudshare360/wsl-dev](https://github.com/cloudshare360/wsl-dev)
 
 ## 🎯 What This Repository Provides
 
@@ -32,7 +36,9 @@ A comprehensive documentation repository for Windows Subsystem for Linux (WSL) s
 
 #### Option 1: GitHub Pages (Recommended)
 Visit our live documentation site:
-**[📱 https://cloudshare360.github.io/wsl-dev/](https://cloudshare360.github.io/wsl-dev/)**
+**🌐 [https://cloudshare360.github.io/wsl-dev/](https://cloudshare360.github.io/wsl-dev/)**
+
+*From the GitHub Pages site, you can easily navigate back to this repository using the navigation links.*
 
 #### Option 2: Local Markdown Server
 ```bash
@@ -182,11 +188,14 @@ This repository is automatically published to GitHub Pages at:
 **[https://cloudshare360.github.io/wsl-dev/](https://cloudshare360.github.io/wsl-dev/)**
 
 The GitHub Pages site provides:
-- ✅ **Mobile-responsive** design
-- ✅ **Search functionality** across all documents
-- ✅ **Direct linking** to specific sections
+- ✅ **Mobile-responsive** design with modern interface
+- ✅ **Easy navigation** between GitHub Pages and repository
+- ✅ **Direct linking** to specific sections and files
 - ✅ **Fast loading** with GitHub's CDN
 - ✅ **Always up-to-date** with the latest commits
+- ✅ **Cross-platform** access from any device
+
+> 💡 **Navigation Tip:** The GitHub Pages site includes prominent links back to this repository, and all documentation pages include links to both the GitHub Pages site and repository for seamless navigation.
 
 ## 📊 Repository Statistics
 
