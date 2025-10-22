@@ -95,7 +95,12 @@ wsl-dev/
 │   └── 🩺 troubleshooting.md        # Common issues & solutions
 ├── 🖥️ wsl-with-rdp/                # RDP Desktop Setup
 │   ├── 📋 WSL-RDP-Master-Guide.md   # Complete RDP setup guide
-│   └── 📂 reference/                # Original conversation files
+│   └── 📂 reference/                # Consolidated reference documentation
+│       ├── 📖 README.md             # Reference guide index
+│       ├── 🚀 WSL_RDP_Setup_Guide.md # Setup and configuration
+│       ├── 🩺 WSL_RDP_Troubleshooting.md # Problem solving
+│       ├── 🔧 WSL_RDP_Management_Guide.md # Advanced management
+│       └── 📁 original-files/       # Original conversation exports
 └── 🛠️ scripts/                     # Utility scripts
     ├── 🚀 setup-local-server.sh     # Local documentation server
     └── 📊 generate-stats.sh         # Repository statistics
@@ -104,8 +109,9 @@ wsl-dev/
 ## 🌟 Key Features
 
 ### ✅ **Comprehensive Coverage**
-- **22 documentation files** with 3,600+ lines of content
-- **Battle-tested solutions** from real-world usage
+- **13 core documentation files** with streamlined, consolidated content  
+- **26+ original conversation exports** preserved in reference archives
+- **Battle-tested solutions** from real-world usage and extensive troubleshooting
 - **Multiple access patterns** for different skill levels
 - **Copy-paste ready** commands and scripts
 

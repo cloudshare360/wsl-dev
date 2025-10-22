@@ -1520,4 +1520,24 @@ sudo cp /etc/xrdp/startwm.sh ~/backup/
 - No "wayland-0" errors in logs
 - Stable session that doesn't crash
 
+---
+
+## 📚 Reference Documentation
+
+For detailed reference documentation, troubleshooting guides, and advanced configuration options, see the comprehensive reference collection:
+
+### [📖 Reference Documentation](./reference/README.md)
+
+**Quick Access to Reference Guides:**
+- **[Setup Guide](./reference/WSL_RDP_Setup_Guide.md)** - Complete installation and configuration
+- **[Troubleshooting](./reference/WSL_RDP_Troubleshooting.md)** - Problem solving and debugging  
+- **[Management Guide](./reference/WSL_RDP_Management_Guide.md)** - Advanced management and configuration
+
+**Reference Structure:**
+- **Consolidated Documentation:** 3 comprehensive guides covering all aspects
+- **Original Sources:** 19+ conversation exports preserved in `original-files/`
+- **Complete Coverage:** Installation, configuration, troubleshooting, management, and advanced topics
+
+---
+
 [← Back to WSL Commands](../wsl-commands/README.md)
