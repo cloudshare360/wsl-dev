@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-10-22T00:00:00Z"
+  },
+  "user_profile": {
+    "skill_level": "advanced",
+    "primary_role": "programmer/developer",
+    "experience_areas": [
+      "DevOps",
+      "Infrastructure as Code", 
+      "Service Management",
+      "System Administration",
+      "Development Environment Setup"
+    ],
+    "preferred_approach": "comprehensive_and_production_ready"
+  },
+  "technical_preferences": {
+    "operating_system": "WSL2/Ubuntu",
+    "shell": "bash",
+    "development_environment": "code-server",
+    "containerization": "docker",
+    "infrastructure_tools": ["terraform", "terraform-cdk", "pulumi"],
+    "programming_languages": ["javascript", "typescript", "python"],
+    "package_managers": ["npm", "pip3", "pipenv"],
+    "version_control": "git"
+  },
+  "installation_preferences": {
+    "modular_approach": true,
+    "verification_required": true,
+    "troubleshooting_tools": true,
+    "service_management": true,
+    "comprehensive_documentation": true,
+    "working_examples": true,
+    "passwordless_sudo": true,
+    "automated_scripts": true
+  },
+  "workflow_preferences": {
+    "path_management": "automatic_with_verification",
+    "service_control": "systemctl_with_aliases",
+    "port_management": "check_and_kill_utilities",
+    "logging": "journalctl_with_custom_scripts",
+    "monitoring": "built_in_scripts_and_aliases",
+    "debugging": "comprehensive_troubleshooting_tools"
+  },
+  "communication_style": {
+    "detail_level": "comprehensive",
+    "explanation_depth": "technical_with_context",
+    "code_examples": "production_ready",
+    "documentation_style": "step_by_step_with_verification",
+    "error_handling": "proactive_with_solutions"
+  },
+  "avoided_patterns": {
+    "monolithic_installations": true,
+    "password_prompts_for_sudo": true,
+    "incomplete_verification": true,
+    "missing_troubleshooting": true,
+    "poor_documentation": true,
+    "untested_code": true
+  },
+  "customizations": {
+    "shell_aliases": {
+      "service_management": ["cs-start", "cs-stop", "cs-restart", "cs-status"],
+      "network_debugging": ["myip", "ports", "listening"],
+      "system_monitoring": ["monitor", "mon-proc", "mon-ports", "mon-mem"],
+      "git_shortcuts": ["gs", "ga", "gc", "gp", "gl"],
+      "development_tools": ["ni", "nr", "ns", "nt", "nb"]
+    },
+    "environment_variables": {
+      "PATH_additions": ["$HOME/.local/bin", "NVM paths", "terraform paths"],
+      "development_specific": ["DOCKER_HOST", "KUBECONFIG", "AWS_CLI_AUTO_PROMPT"]
+    }
+  },
+  "success_patterns": {
+    "comprehensive_verification": "always include verification scripts",
+    "service_management": "provide start/stop/restart automation",
+    "troubleshooting_ready": "include debugging and diagnostic tools",
+    "modular_design": "allow selective installation of components",
+    "documentation_first": "create clear documentation with examples"
+  }
+}
