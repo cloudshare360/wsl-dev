@@ -156,7 +156,37 @@ Organized WSL command reference with practical examples and real-world usage pat
 
 **👉 [Browse WSL Commands](./wsl-commands/README.md)**
 
-## 🛠️ Local Development Server
+## � Code-Server Development Environments
+
+Looking for a browser-based VS Code environment? Choose your development path:
+
+| **Path** | **Time** | **Components** | **Best For** |
+|----------|----------|----------------|--------------|
+| **[Web Developer](wsl-install-code-server/quick-install/web-developer.md)** | 30 min | Code-Server + Node.js + React + TypeScript | Frontend/Web Development |
+| **[Full Stack Developer](wsl-install-code-server/quick-install/fullstack-developer.md)** | 45 min | Frontend + Backend + Database + Docker | Complete Web Applications |
+| **[DevOps Engineer](wsl-install-code-server/quick-install/devops-engineer.md)** | 40 min | Docker + K8s + AWS + IaC Tools | Infrastructure/DevOps |
+| **[Data Scientist](wsl-install-code-server/quick-install/data-scientist.md)** | 35 min | Python + ML/AI + Jupyter + Big Data | Data Science/AI |
+| **[Minimal Setup](wsl-install-code-server/01-system-setup/)** | 15 min | Code-Server + Essential Tools | Basic Development |
+
+### 🚀 One-Command Install
+```bash
+# Web Developer Environment (most popular)
+curl -fsSL https://raw.githubusercontent.com/cloudshare360/wsl-dev/main/wsl-install-code-server/quick-install/web-developer.sh | bash
+
+# Or browse all options
+ls wsl-install-code-server/quick-install/
+```
+
+**Key Benefits:**
+- ✅ **Browser-based VS Code** - Access from any device
+- ✅ **No password required** - Optimized for development
+- ✅ **LAN accessible** - Share with team members
+- ✅ **Modular installation** - Install only what you need
+- ✅ **Production-ready** - Real-world tested configurations
+
+**👉 [Explore All Installation Options](./wsl-install-code-server/README.md)**
+
+## �🛠️ Local Development Server
 
 For the best browsing experience, run a local markdown server:
 
